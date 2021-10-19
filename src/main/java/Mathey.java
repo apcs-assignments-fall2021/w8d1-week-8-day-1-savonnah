@@ -183,8 +183,11 @@ public class Mathey {
      *     floor(2.999999999999) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
+    public static int floor(double x){
+        double end = x-(int)(x);
+        double start =x-end;
+        return (int)(start);
+    }
 
 
 
@@ -197,7 +200,11 @@ public class Mathey {
      *     ceil(3.01) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int ceil(double x){
+        double end = x-(int)(x);
+        double start =x-end;
+        return (int)(start+1);
+    }
 
 
 
