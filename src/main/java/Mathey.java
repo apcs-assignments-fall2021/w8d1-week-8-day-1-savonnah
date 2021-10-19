@@ -8,7 +8,15 @@ public class Mathey {
      * public static ...
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int max(int x, int y){
+        if (x>y){
+            return x;
+        }
+       else{
+            return y;
+        }
 
+    }
 
 
 
@@ -16,7 +24,15 @@ public class Mathey {
      * Ex. max(1.2, 4.0) => 4.0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double max(double x, double y){
+        if (x>y){
+            return x;
+        }
+        else{
+            return y;
+        }
 
+    }
 
 
 
@@ -24,7 +40,21 @@ public class Mathey {
      * Ex. max(1, 4, 2) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int max(int x, int y, int z){
+        /*
+        if (x>y && x>z){
+            return x;
+        }
+        else if (y>x && y>z){
+            return y;
+        }
+        else {
+            return z;
+        }
+        */
+        // OR
+        return max(max(x,y),z);
+    }
 
 
 
@@ -32,7 +62,20 @@ public class Mathey {
      * Ex. max(1.0, 4.25, 1.3, 2.1) => 4.25
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static double max(double x, double y, double z, double a){
+        if (x>y && x>z && x>a){
+            return x;
+        }
+        else if (y>x && y>z && y>a){
+            return y;
+        }
+        else if (z>x && z>y && z>a){
+            return y;
+        }
+        else {
+            return a;
+        }
+    }
 
 
 
@@ -45,7 +88,11 @@ public class Mathey {
      *     randomInteger(1, 4) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int randomInteger(int x, int y){
+        int num = (y-x)+1;
+        return (int) (Math.random()*num) +x;  //multiplly by how many numbers want = 11 and then between 10 and 20 so add 10
 
+    }
 
 
 
@@ -57,7 +104,11 @@ public class Mathey {
      *     randomInteger(5) => 0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int randomInteger(int x){
+        int num = x+1;
+        return (int) (Math.random()*num);  //multiplly by how many numbers want = 11 and then between 10 and 20 so add 10
 
+    }
 
 
 
@@ -73,7 +124,13 @@ public class Mathey {
      *     pow(3, 4) => 81
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int pow(int x, int y){
+        int num = 1;
+        for (int i = 0; i < y; i++){
+           num *= x;
+        }
+        return num;
+    }
 
 
 
@@ -83,7 +140,14 @@ public class Mathey {
      *     abs(-2) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int abs(int x){
+        if (x<0){
+            return x*-1;
+        }
+        else{
+            return x;
+        }
+    }
 
 
 
@@ -91,9 +155,20 @@ public class Mathey {
      * integer value that you get by rounding that double
      * You may assume that the integer is positive
      * Ex. round(2.4) => 2
-     *     round(2.5) => 2
+     *     round(2.5) => 3
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int round(double x){
+        double end = x-(int)(x);
+        double num = 1.0-end;
+        double start = x-end;
+        if (end>=0.5) {
+            return (int)(start + (end + num));
+        }
+        else {
+            return (int)(x);
+            }
+        }
 
 
 

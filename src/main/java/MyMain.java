@@ -21,8 +21,18 @@ public class MyMain {
         int r2 = randomTeen();
         int r3 = randomTeen();
         System.out.println("The three random numbers are " + r1 + ", " + r2+ ", " + r3);
-        System.out.println(Math.max(r1, Math.max(r2,r3)));
+        System.out.println(Mathey.max(r1,r2,r3));
+        System.out.println(Mathey.max(r1, Mathey.max(r2,r3)));
         System.out.println(Math.min(r1, Math.min(r2,r3)));
+        System.out.println(Mathey.randomInteger(5));
+        System.out.println(Mathey.randomInteger(10, 20));
+        System.out.println(Mathey.pow(2, 5));
+        System.out.println(Mathey.pow(3, 4));
+        System.out.println(Mathey.abs(-2));
+        System.out.println(Mathey.abs(2));
+        System.out.println(Mathey.round(2.4));
+        System.out.println(Mathey.round(2.5));
+
 
 
 
