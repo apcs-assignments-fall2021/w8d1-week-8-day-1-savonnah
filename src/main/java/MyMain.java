@@ -25,8 +25,10 @@ public class MyMain {
         System.out.println(Mathey.max(r1,r2,r3));
         System.out.println(Mathey.max(r1, Mathey.max(r2,r3)));
         System.out.println(Math.min(r1, Math.min(r2,r3)));
+        System.out.println(Mathey.max(1.0, 2.0)); // 2
         System.out.println(Mathey.max(1, 2)); // 2
         System.out.println(Mathey.max(2, 1)); // 2
+        System.out.println(Mathey.max(1.0, 2.0, 3.5, 4.0));
         System.out.println("Mathey.randomInteger tests");
         System.out.println(Mathey.randomInteger(5));
         System.out.println(Mathey.randomInteger(10, 20));
